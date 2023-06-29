@@ -9,9 +9,25 @@ public class Ravenclaw extends Hogwarts{
         this.wise = wise;
         this.creative = creative;
     }
-
-
     public int getTotal() {
         return smart + wise + creative;
+    }
+
+    public void compareRavenclawStudents(Ravenclaw student2) {
+        if (getTotal() == student2.getTotal()) {
+            System.out.println("Students power are equal");
+        } else if (getTotal() > student2.getTotal()) {
+            System.out.println(getFullName() + " is more powerful than " + student2.getFullName());
+        } else {
+            System.out.println(student2.getFullName() + " is more powerful than " + getFullName());
+        }
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() +
+                " smart=" + smart +
+                ", wise=" + wise +
+                ", creative=" + creative;
     }
 }

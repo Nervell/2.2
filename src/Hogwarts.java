@@ -16,4 +16,20 @@ public class Hogwarts {
     public int getTotalPower() {
         return power + distanceOfSpells;
     }
+    public void compareStudents(Hogwarts student2) {
+        if (getTotalPower() == student2.getTotalPower()) {
+            System.out.println("Students power are equal");
+        } else if (getTotalPower() > student2.getTotalPower()) {
+            System.out.println(getFullName() + " is more powerful than " + student2.getFullName());
+        } else {
+            System.out.println(student2.getFullName() + " is more powerful than " + getFullName());
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "Full Name='" + fullName + '\'' +
+                ", power=" + power +
+                ", distance Of Spells=" + distanceOfSpells;
+    }
 }

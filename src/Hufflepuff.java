@@ -13,4 +13,22 @@ public class Hufflepuff extends Hogwarts{
     public int getTotal() {
         return hardworking + loyal + honest;
     }
+
+    public void compareHufflepuffStudents(Hufflepuff student2) {
+        if (getTotal() == student2.getTotal()) {
+            System.out.println("Students power are equal");
+        } else if (getTotal() > student2.getTotal()) {
+            System.out.println(getFullName() + " is more powerful than " + student2.getFullName());
+        } else {
+            System.out.println(student2.getFullName() + " is more powerful than " + getFullName());
+        }
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() +
+                " hardworking=" + hardworking +
+                ", loyal=" + loyal +
+                ", honest=" + honest;
+    }
 }
